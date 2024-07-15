@@ -1,0 +1,134 @@
+.advantages {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background-color: #fff5f6;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 33px;
+    padding-bottom: 70px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 0px;
+    padding-bottom: 139px;
+  }
+}
+
+.advantages__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.advantages__item {
+  width: 230px;
+
+  // Иконки
+
+  &:nth-child(1)::before {
+    content: '';
+    width: 33px;
+    height: 55px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    display: flex;
+    background-image: url(../images/advantages/icon1.png);
+  }
+
+  &:nth-child(2)::before {
+    content: '';
+
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    display: flex;
+    background-image: url(../images/advantages/icon2.png);
+  }
+
+  &:nth-child(3)::before {
+    content: '';
+
+    width: 44px;
+    height: 50px;
+    margin-bottom: 16px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-image: url(../images/advantages/icon3.png);
+  }
+
+  @media screen and (max-width: 767px) {
+    & + & {
+      margin-top: 38px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .advantages__list &::before {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & + & {
+      margin-left: 60px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 330px;
+
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  .advantages__list &::before {
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.advantages__item-title {
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: calc(41 / 36);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--advantages-title-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: calc(55 / 48);
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+  }
+}
+
+.advantages__item-text {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(20 / 12);
+  margin-top: 16px;
+  color: var(--customer--text-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+  }
+}
